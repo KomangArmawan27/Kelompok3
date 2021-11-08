@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('admin.blade.php');
+Route::get('/', static function () {
+    return view('admin');
 });
