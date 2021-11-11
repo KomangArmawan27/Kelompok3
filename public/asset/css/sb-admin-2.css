@@ -10562,6 +10562,9 @@ a:focus {
   .sidebar .sidebar-brand .sidebar-brand-icon i {
     font-size: 2rem;
   }
+  .sidebar-brand-icon img {
+    width: 60px;
+  }
   .sidebar .sidebar-brand .sidebar-brand-text {
     display: inline;
   }
