@@ -58,7 +58,6 @@
                                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </a>
-                                <hr>
                             </form>
                             <hr>
                             <div class="text-center">

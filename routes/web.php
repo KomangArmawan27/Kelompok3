@@ -22,4 +22,5 @@ Route::get('/', static function () {
 
 Route::get('/login', [LoginController::class, 'login']);
 Route::get('/register', [RegisterController::class, 'register']);
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+Route::get('/dashboard_admin', [DashboardController::class, 'admin']);
+Route::get('/dashboard_user', [DashboardController::class, 'user']);
