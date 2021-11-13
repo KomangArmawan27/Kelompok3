@@ -17,7 +17,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', static function () {
-    return view('welcome');
+    return view('admin');
 });
 
 Route::get('/login', [LoginController::class, 'login']);
