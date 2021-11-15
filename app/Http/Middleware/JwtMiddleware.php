@@ -2,6 +2,7 @@
 
     namespace App\Http\Middleware;
 
+    use App\Models\User;
     use Closure;
     use JWTAuth;
     use Exception;
@@ -17,7 +18,7 @@
          * @param  \Closure  $next
          * @return mixed
          */
-        public function handle($request, Closure $next)
+        public function handle($request, Closure $next, ...$roles)
         {
             try {
                 $user = JWTAuth::parseToken()->authenticate();
@@ -31,5 +32,10 @@
                 }
             }
             return $next($request);
+            
+            if(in_array($request->user()->role,$roles)){
+                return $next($request);
+            }
+            return redirect('/');
         }
     }

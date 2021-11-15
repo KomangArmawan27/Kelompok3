@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -44,12 +45,12 @@
                                     <form class="user">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                id="email" aria-describedby="emailHelp"
                                                 placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="password" placeholder="Password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -58,16 +59,16 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <button type="button" class="btn btn-primary btn-user btn-block" id="btn_login">
                                             Login
-                                        </a>
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small" href="forgot-password.html">Lupa Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register">Create an Account!</a>
+                                        <a class="small" href="register">Daftar Akun!</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,6 +91,105 @@
 
     <!-- Custom scripts for all pages-->
     <script src="/asset/js/sb-admin-2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $("#btn_login").click(function (response) {
+
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                if (email.length == "") {
+
+                    Swal.fire({
+                        type: 'warning',
+                        title: 'Oops...',
+                        text: 'Alamat Email Wajib Diisi !'
+                    });
+
+                } else if (password.length == "") {
+
+                    Swal.fire({
+                        type: 'warning',
+                        title: 'Oops...',
+                        text: 'Password Wajib Diisi !'
+                    });
+
+                } else {
+
+                    $.ajax({
+                        url: "http://127.0.0.1:8000/api/auth",
+                        type: "POST",
+                        dataType: "JSON",
+                        cache: false,
+                        data: {
+                            "email": email,
+                            "password": password
+                        },
+
+                        success: function (response) {
+
+                            if (response.success) {
+
+                                Swal.fire({
+                                        type: 'success',
+                                        title: 'Login Berhasil!',
+                                        text: 'Anda akan di arahkan dalam 3 Detik',
+                                        timer: 1000,
+                                        showCancelButton: false,
+                                        showConfirmButton: false
+                                    })
+                                    .then(function () {
+                                        window.location.href =
+                                            "http://127.0.0.1:8000/dashboard";
+                                    });
+
+                            } else {
+
+                                console.log(response.success);
+
+                                Swal.fire({
+                                    type: 'error',
+                                    title: 'Login Gagal!',
+                                    text: 'silahkan coba lagi!'
+                                });
+
+                            }
+
+                            console.log(response);
+
+                        },
+
+                        error: function (response) {
+
+                            Swal.fire({
+                                type: 'error',
+                                title: 'Opps!',
+                                text: 'server error!'
+                            });
+
+                            console.log(data);
+
+                        }
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    </script>
+
 
 </body>
 

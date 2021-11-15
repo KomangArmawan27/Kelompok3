@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\DataController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +19,11 @@ use App\Http\Controllers\DataController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::post('register', [UserController::class, 'register']);
-    Route::post('login', [UserController::class, 'authenticate']);
-    Route::get('open', [DataController::class, 'open']);
+    Route::post('reg', [UserController::class, 'reg']);
+    Route::post('auth', [UserController::class, 'authenticate']);
 
     Route::group(['middleware' => ['jwt.verify']], function() {
         Route::get('user', [UserController::class, 'getAuthenticatedUser']);
-        Route::get('closed', [DataController::class, 'closed']);
+        Route::get('/dashboard', [DashboardController::class, 'admin']);
+        Route::get('/dashboard', [DashboardController::class, 'user']);
     });

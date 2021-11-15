@@ -22,16 +22,26 @@
             } catch (JWTException $e) {
                 return response()->json(['error' => 'could_not_create_token'], 500);
             }
-
+            if (JWTAuth::attempt($credentials)) {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Login Berhasil!'
+                ], 201);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Login Gagal!'
+                ], 400);
+            }
             return response()->json(compact('token'));
         }
 
-        public function register(Request $request)
+        public function reg(Request $request)
         {
                 $validator = Validator::make($request->all(), [
                 'name' => 'required|string|max:255',
                 'email' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:5|confirmed',
+                'password' => 'required|string|min:5',
             ]);
 
             if($validator->fails()){
@@ -46,10 +56,23 @@
 
             $token = JWTAuth::fromUser($user);
 
+            if($user) {
+                return response()->json([
+                    'success' => true,
+                    'token' => $user->createToken('kopma')->plainTextToken,
+                    'message' => 'Register Berhasil!'
+                ], 201);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Register Gagal!'
+                ], 400);
+            } 
+
             return response()->json(compact('user','token'),201);
         }
 
-        public function getAuthenticatedUser()
+        public function getAuthenticatedUser(Request $request)
             {
                     try {
 
