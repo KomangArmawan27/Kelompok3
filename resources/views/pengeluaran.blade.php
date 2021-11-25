@@ -17,9 +17,6 @@
 
     <!-- Custom styles for this template-->
     <link href="/asset/css/sb-admin-2.css" rel="stylesheet">
-    
-    <!-- Custom styles for this page -->
-    <link href="/asset/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -698,11 +695,11 @@
             <script src="/asset/js/sb-admin-2.min.js"></script>
 
             <!-- Page level plugins -->
-            <script src="/asset/datatables/jquery.dataTables.min.js"></script>
-            <script src="/asset/datatables/dataTables.bootstrap4.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
             <!-- Page level custom scripts -->
-            <script src="asset/js/demo/datatables-demo.js"></script>
+            <script src="/asset/js/demo/chart-area-demo.js"></script>
+            <script src="/asset/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

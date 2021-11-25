@@ -19,11 +19,3 @@ use App\Http\Controllers\DashboardController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-    Route::post('reg', [UserController::class, 'reg']);
-    Route::post('auth', [UserController::class, 'authenticate']);
-
-    Route::group(['middleware' => ['jwt.verify']], function() {
-        Route::get('user', [UserController::class, 'getAuthenticatedUser']);
-        Route::get('/dashboard', [DashboardController::class, 'admin']);
-        Route::get('/dashboard', [DashboardController::class, 'user']);
-    });
