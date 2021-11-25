@@ -41,24 +41,33 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form action="{{url('auth')}}" method="POST" id="logForm">
+
+                                        {{ csrf_field() }}
+
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="email" name="email" class="form-control form-control-user"
                                                 id="email" aria-describedby="emailHelp"
                                                 placeholder="Enter Email Address...">
+                                                @if ($errors->has('email'))
+                                                <span class="error">{{ $errors->first('email') }}</span>
+                                                @endif
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" name="password" class="form-control form-control-user"
                                                 id="password" placeholder="Password">
+                                                @if ($errors->has('password'))
+                                                <span class="error">{{ $errors->first('password') }}</span>
+                                                @endif
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
+                                                <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                                <label class="custom-control-label" for="remember">Remember
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <button type="button" class="btn btn-primary btn-user btn-block" id="btn_login">
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">
                                             Login
                                         </button>
                                     </form>
@@ -91,104 +100,6 @@
     <!-- Custom scripts for all pages-->
     <script src="/asset/js/sb-admin-2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-            $("#btn_login").click(function (response) {
-
-                var email = $("#email").val();
-                var password = $("#password").val();
-
-                if (email.length == "") {
-
-                    Swal.fire({
-                        type: 'warning',
-                        title: 'Oops...',
-                        text: 'Alamat Email Wajib Diisi !'
-                    });
-
-                } else if (password.length == "") {
-
-                    Swal.fire({
-                        type: 'warning',
-                        title: 'Oops...',
-                        text: 'Password Wajib Diisi !'
-                    });
-
-                } else {
-
-                    $.ajax({
-                        url: "http://127.0.0.1:8000/api/auth",
-                        type: "POST",
-                        dataType: "JSON",
-                        cache: false,
-                        data: {
-                            "email": email,
-                            "password": password
-                        },
-
-                        success: function (response) {
-
-                            if (response.success) {
-
-                                Swal.fire({
-                                        type: 'success',
-                                        title: 'Login Berhasil!',
-                                        text: 'Anda akan di arahkan dalam 3 Detik',
-                                        timer: 1000,
-                                        showCancelButton: false,
-                                        showConfirmButton: false
-                                    })
-                                    .then(function () {
-                                        window.location.href =
-                                            "http://127.0.0.1:8000/dashboard";
-                                    });
-
-                            } else {
-
-                                console.log(response.success);
-
-                                Swal.fire({
-                                    type: 'error',
-                                    title: 'Login Gagal!',
-                                    text: 'silahkan coba lagi!'
-                                });
-
-                            }
-
-                            console.log(response);
-
-                        },
-
-                        error: function (response) {
-
-                            Swal.fire({
-                                type: 'error',
-                                title: 'Opps!',
-                                text: 'server error!'
-                            });
-
-                            console.log(data);
-
-                        }
-
-                    });
-
-                }
-
-            });
-
-        });
-
-    </script>
-
 
 </body>
 

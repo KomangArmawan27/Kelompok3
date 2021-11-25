@@ -36,26 +36,39 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Daftar Akun!</h1>
                             </div>
-                            <form class="user">
+                            <form action="{{url('reg')}}" method="POST" id="regForm">
+
+                                {{ csrf_field() }}
+
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="name"
-                                        placeholder="Username">
+                                    <input type="text" name="name" class="form-control form-control-user" id="name"
+                                        placeholder="Username" autofocus>
+                                        @if ($errors->has('name'))
+                                        <span class="error">{{ $errors->first('name') }}</span>
+                                        @endif
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="email"
+                                    <input type="email" name="email" class="form-control form-control-user" id="email"
                                         placeholder="Email Address">
+                                        @if ($errors->has('email'))
+                                        <span class="error">{{ $errors->first('email') }}</span>
+                                        @endif
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" name="password" class="form-control form-control-user"
                                             id="password" placeholder="Password">
+                                            @if ($errors->has('password'))
+                                            <span class="error">{{ $errors->first('password') }}</span>
+                                            @endif  
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="double_password" placeholder="Repeat Password">
+                                        <input id="confirm_password" type="password" class="form-control form-control-user" name="confirm_password" 
+                                        placeholder="Repeat Password" />
+                                        <span id='message'></span>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary btn-user btn-block" id="btn_register">
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Daftar Akun
                                 </button>
                             </form>
@@ -81,114 +94,17 @@
     <!-- Custom scripts for all pages-->
     <script src="/asset/js/sb-admin-2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
-    $(document).ready(function() {
-        $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-
-        $("#btn_register").click( function(response) {
-
-            var name = $("#name").val();
-            var email    = $("#email").val();
-            var password = $("#password").val();
-            var double_password = $("#double_password").val();
-
-            if (name.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Nama Wajib Diisi !'
-                });
-
-            } else if(email.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Alamat Email Wajib Diisi !'
-                });
-
-            } else if(password.length == "") {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Password Wajib Diisi !'
-                });
-            } else if(password != double_password) {
-
-                Swal.fire({
-                    type: 'warning',
-                    title: 'Oops...',
-                    text: 'Password Harus Sama !'
-                });
-            } else {
-
-                //ajax
-                $.ajax({
-
-                    url: "http://127.0.0.1:8000/api/reg",
-                    type: "POST",
-                    dataType: "JSON",
-                    cache: false,
-                    data: {
-                        "name": name,
-                        "email": email,
-                        "password": password
-                    },
-
-                    success:function(response){
-
-                        if (response.success) {
-
-                            Swal.fire({
-                                type: 'success',
-                                title: 'Register Berhasil!',
-                                text: 'silahkan login!'
-                                
-                                    })
-                                    .then(function () {
-                                        window.location.href =
-                                            "http://127.0.0.1:8000/login";
-                                    });
-
-
-                        } else {
-
-                            Swal.fire({
-                                type: 'error',
-                                title: 'Register Gagal!',
-                                text: 'silahkan coba lagi!'
-                            });
-
-                        }
-
-                        console.log(response);
-
-                    },
-
-                    error:function(response){
-                        Swal.fire({
-                            type: 'error',
-                            title: 'Opps!',
-                            text: 'server error!'
-                        });
-                    }
-
-                })
-
-            }
-
+        $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else 
+            $('#message').html('Not Matching').css('color', 'red');
         });
-    });
-</script>
+    </script>
+
 </body>
 
 </html>
