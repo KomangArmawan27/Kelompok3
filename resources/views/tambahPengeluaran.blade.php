@@ -83,7 +83,7 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper">
 
             <!-- Main Content -->
             <div id="content">
@@ -153,65 +153,25 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Content Row -->
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Pengeluaran</h6>
+                    <form>
+                        <div class="form-group">
+                            <label for="Tanggal">Tanggal Terkini</label>
+                            <input type="date" class="form-control" id="tanggal">
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Tanggal</th>
-                                            <th>Jumlah</th>
-                                            <th>Penggunaan</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Tanggal</th>
-                                            <th>Jumlah</th>
-                                            <th>Penggunaan</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>28 februari</td>
-                                            <td>100k</td>
-                                            <td>membeli kerupuk</td>
-                                            <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="tambahPengeluaran" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Tambahkan Data</a>
-                            </div>
+                        <div class="form-group">
+                            <label for="Jumlah">Jumlah Pengeluaran</label>
+                            <input type="number" class="form-control" id="jumlah_pengeluaran" placeholder="Jumlah Pengeluaran">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="Penggunaan">Penggunaan Untuk</label>
+                            <input type="text" class="form-control" id="penggunaan" placeholder="Penggunaan">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Tambahkan</button>
+                    </form>
                 </div>
                 <!-- End of Content Wrapper -->
             </div>
             <!-- End of Page Wrapper -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
             <!-- Scroll to Top Button-->
             <a class="scroll-to-top rounded" href="#page-top">

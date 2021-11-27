@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
+use App\Http\Controllers\TambahPemasukanController;
+use App\Http\Controllers\TambahPengeluaranController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -18,7 +21,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin');
 });
 
 
@@ -29,5 +32,8 @@ Route::post('/reg', [UserController::class, 'postRegistration']);
 Route::get('/dashboard', [DashboardController::class, 'admin']);
 Route::get('/dashboard', [DashboardController::class, 'user']);
 Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
+Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
 Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
+Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
+Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/logout', [UserController::class, 'logout']);

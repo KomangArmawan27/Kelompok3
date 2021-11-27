@@ -14,12 +14,10 @@
 
     <!-- Custom fonts for this template-->
     <link href="/asset/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="/asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/asset/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -41,30 +39,26 @@
                                 {{ csrf_field() }}
 
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control form-control-user" id="name"
-                                        placeholder="Username" autofocus>
-                                        @if ($errors->has('name'))
-                                        <span class="error">{{ $errors->first('name') }}</span>
-                                        @endif
+                                    <input type="text" name="name" class="form-control form-control-user" id="name" placeholder="Username" autofocus>
+                                    @if ($errors->has('name'))
+                                    <span class="error">{{ $errors->first('name') }}</span>
+                                    @endif
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control form-control-user" id="email"
-                                        placeholder="Email Address">
-                                        @if ($errors->has('email'))
-                                        <span class="error">{{ $errors->first('email') }}</span>
-                                        @endif
+                                    <input type="email" name="email" class="form-control form-control-user" id="email" placeholder="Email Address">
+                                    @if ($errors->has('email'))
+                                    <span class="error">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" name="password" class="form-control form-control-user"
-                                            id="password" placeholder="Password">
-                                            @if ($errors->has('password'))
-                                            <span class="error">{{ $errors->first('password') }}</span>
-                                            @endif  
+                                        <input type="password" name="password" class="form-control form-control-user" id="password" placeholder="Password">
+                                        @if ($errors->has('password'))
+                                        <span class="error">{{ $errors->first('password') }}</span>
+                                        @endif
                                     </div>
                                     <div class="col-sm-6">
-                                        <input id="confirm_password" type="password" class="form-control form-control-user" name="confirm_password" 
-                                        placeholder="Repeat Password" />
+                                        <input id="confirm_password" type="password" class="form-control form-control-user" name="confirm_password" placeholder="Repeat Password" />
                                         <span id='message'></span>
                                     </div>
                                 </div>
@@ -97,11 +91,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
-        $('#password, #confirm_password').on('keyup', function () {
-        if ($('#password').val() == $('#confirm_password').val()) {
-            $('#message').html('Matching').css('color', 'green');
-        } else 
-            $('#message').html('Not Matching').css('color', 'red');
+        $('#password, #confirm_password').on('keyup', function() {
+            if ($('#password').val() == $('#confirm_password').val()) {
+                $('#message').html('Matching').css('color', 'green');
+            } else
+                $('#message').html('Not Matching').css('color', 'red');
         });
     </script>
 

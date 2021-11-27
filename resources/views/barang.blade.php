@@ -50,7 +50,7 @@
 
             <!-- Nav Item - Pemasukan  -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="pemasukan">
                     <i class="fas fa-hand-holding-usd"></i>
                     <span>Pemasukan </span>
                 </a>
@@ -58,7 +58,7 @@
 
             <!-- Nav Item - Pengeluaran  -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="pengeluaran">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Pengeluaran</span>
                 </a>
@@ -66,7 +66,7 @@
 
             <!-- Nav Item - Barang  -->
             <li class="nav-item active">
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="barang">
                     <i class="fa fa-th-large" aria-hidden="true"></i>
                     <span>Barang</span>
                 </a>
@@ -275,20 +275,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Footer -->
-                            <footer class="sticky-footer bg-white">
-                                <div class="container my-auto">
-                                    <div class="copyright text-center my-auto">
-                                        <span>Copyright &copy; Your Website 2021</span>
-                                    </div>
-                                </div>
-                            </footer>
-                            <!-- End of Footer -->
                         </div>
                         <!-- End of Content Wrapper -->
                     </div>
                     <!-- End of Page Wrapper -->
-                    
+
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Your Website 2021</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
 
                     <!-- Scroll to Top Button-->
                     <a class="scroll-to-top rounded" href="#page-top">
@@ -313,23 +313,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-                    <!-- Bootstrap core JavaScript-->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-                    <!-- Core plugin JavaScript-->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/asset/js/sb-admin-2.min.js"></script>
 
-                    <!-- Custom scripts for all pages-->
-                    <script src="/asset/js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
-                    <!-- Page level plugins -->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
-
-                    <!-- Page level custom scripts -->
-                    <script src="/asset/js/demo/chart-area-demo.js"></script>
-                    <script src="/asset/js/demo/chart-pie-demo.js"></script>
-
+    <!-- Page level custom scripts -->
+    <script src="/asset/js/demo/chart-area-demo.js"></script>
+    <script src="/asset/js/demo/chart-pie-demo.js"></script>
 </body>
 
 </html>
