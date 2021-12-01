@@ -3,6 +3,7 @@
 use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\lupaPasswordController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\TambahPemasukanController;
@@ -21,11 +22,12 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('admin');
+    return view('welcome');
 });
 
 
 Route::get('/login', [UserController::class, 'index']);
+Route::get('/lupaPassword', [lupaPasswordController::class, 'lupaPassword']);
 Route::get('/register', [UserController::class, 'registration']);
 Route::post('/auth', [UserController::class, 'postLogin']);
 Route::post('/reg', [UserController::class, 'postRegistration']);
