@@ -125,7 +125,7 @@
                                 <img class="img-profile rounded-circle" src="/asset/img/profile.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">                                
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -237,32 +237,88 @@
 
                         <!-- Content Column -->
                         <div class="col-lg-12 mb-4">
-
-                            <!-- Project Card Example -->
+                            <!-- pemasukan -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Pemasukan</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Penerima</th>
+                                                    <th>Edit</th>
+                                                    <th>Hapus</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Penerima</th>
+                                                    <th>Edit</th>
+                                                    <th>Hapus</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>27 januari 2056</td>
+                                                    <td>100k</td>
+                                                    <td>arum</td>
+                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
+                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <!-- pengeluaran -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pengeluaran</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Penggunaan</th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Jumlah</th>
+                                                    <th>Penggunaan</th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>28 februari</td>
+                                                    <td>100k</td>
+                                                    <td>membeli kerupuk</td>
+                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
+                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -271,15 +327,6 @@
                     </div>
                     <!-- End of Page Wrapper -->
 
-                    <!-- Footer -->
-                    <footer class="sticky-footer bg-white">
-                        <div class="container my-auto">
-                            <div class="copyright text-center my-auto">
-                                <span>Copyright &copy; Your Website 2021</span>
-                            </div>
-                        </div>
-                    </footer>
-                    <!-- End of Footer -->
 
                     <!-- Scroll to Top Button-->
                     <a class="scroll-to-top rounded" href="#page-top">
@@ -304,6 +351,15 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Footer -->
+                    <footer class="sticky-footer bg-white">
+                        <div class="container my-auto">
+                            <div class="copyright text-center my-auto">
+                                <span>Copyright &copy; Your Website 2021</span>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End of Footer -->
                 </div>
             </div>
         </div>
