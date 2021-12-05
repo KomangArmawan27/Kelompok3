@@ -347,7 +347,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="/contact.php" method="post" class="php-email-form">
+                        <form action="{{url('contact')}}" method="post" class="php-email-form">
                             <div class="row gy-4">
 
                                 <div class="col-md-6">

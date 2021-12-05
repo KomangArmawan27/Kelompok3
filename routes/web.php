@@ -32,6 +32,7 @@ Route::get('/lupaPassword', [lupaPasswordController::class, 'lupaPassword']);
 Route::get('/register', [UserController::class, 'registration']);
 Route::post('/auth', [UserController::class, 'postLogin']);
 Route::post('/reg', [UserController::class, 'postRegistration']);
+Route::post('/contact', [UserController::class, 'contact']);
 Route::group(['middleware' => ['web', 'auth']], function(){
     Route::get('/dashboard', [DashboardController::class]);
     Route::get('/dashboard',function(){
