@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     public function admin()
     {
-        if(Auth::check()){
+        if(Auth::check(1)){
             return view('admin');
           }
            return Redirect::to("login")->withSuccess('Opps! You do not have access');
@@ -19,7 +19,7 @@ class DashboardController extends Controller
     
     public function user()
     {
-        if(Auth::check()){
+        if(Auth::check(0)){
             return view('user');
           }
            return Redirect::to("login")->withSuccess('Opps! You do not have access');

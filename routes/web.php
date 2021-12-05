@@ -9,6 +9,7 @@ use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\TambahPemasukanController;
 use App\Http\Controllers\TambahPengeluaranController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +32,19 @@ Route::get('/lupaPassword', [lupaPasswordController::class, 'lupaPassword']);
 Route::get('/register', [UserController::class, 'registration']);
 Route::post('/auth', [UserController::class, 'postLogin']);
 Route::post('/reg', [UserController::class, 'postRegistration']);
-Route::get('/dashboard', [DashboardController::class, 'admin']);
-Route::get('/dashboard', [DashboardController::class, 'user']);
+Route::group(['middleware' => ['web', 'auth']], function(){
+    Route::get('/dashboard', [DashboardController::class]);
+    Route::get('/dashboard',function(){
+        if(Auth::user()->admin == 1){
+        return view('admin');
+    }else{
+        return view('user');
+        }
+    });
+});
+Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
+    return view('admin');
+});
 Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
 Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
 Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
