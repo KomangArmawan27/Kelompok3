@@ -105,6 +105,6 @@ class UserController extends Controller
     $contact->add_message( $_POST['email'], 'Email');
     $contact->add_message( $_POST['message'], 'Message', 10);
 
-    return $contact->send();
+    echo $contact->send();
     }
 }
