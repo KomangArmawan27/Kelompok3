@@ -52,7 +52,6 @@
                     <li><a class="nav-link scrollto" href="#about">Tentang Kopma</a></li>
                     <li><a class="nav-link scrollto" href="#services">Jasa</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Mulai</a></li>
                     <li><a class="getstarted scrollto" href="#">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -348,7 +347,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form">
+                        <form action="/contact.php" method="post" class="php-email-form">
                             <div class="row gy-4">
 
                                 <div class="col-md-6">
