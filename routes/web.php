@@ -41,13 +41,13 @@ Route::group(['middleware' => ['web', 'auth']], function(){
         return view('user');
         }
     });
-});
-Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
-    return view('admin');
-});
 Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
 Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
 Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
 Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/logout', [UserController::class, 'logout']);
+});
+Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
+    return view('admin');
+});
