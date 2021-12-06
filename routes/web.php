@@ -10,6 +10,7 @@ use App\Http\Controllers\userPageController;
 use App\Http\Controllers\TambahPemasukanController;
 use App\Http\Controllers\TambahPengeluaranController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\InsertTambahPengeluaranController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -54,3 +55,7 @@ Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
 Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/logout', [UserController::class, 'logout']);
+
+//insert data
+Route::get('insert','InsertTambahPengeluaranController@insertform');  //iki gaguna sek an, gangerti carane wkwk
+Route::post('/create', [InsertTambahPengeluaranController::class, 'insert']);

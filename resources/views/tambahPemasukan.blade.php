@@ -138,22 +138,24 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <form>
+                    <form action = "/create" method = "post">
+                    <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
                         <div class="form-group">
                             <label for="Tanggal">Tanggal Terkini</label>
-                            <input type="date" class="form-control" id="tanggal">
+                            <input type="date" class="form-control" id="tanggal" name="tanggal">
                         </div>
                         <div class="form-group">
                             <label for="Jumlah">Jumlah Pemasukan</label>
-                            <input type="number" class="form-control" id="jumlah_pemasukan" placeholder="Jumlah Pemasukan">
+                            <input type="number" class="form-control" id="jumlah_pemasukan" name="jumlah_pemasukan" placeholder="Jumlah Pemasukan">
                         </div>
                         <div class="form-group">
                             <label for="Penerima">Nama Penerima</label>
-                            <input type="text" class="form-control" id="penerima" placeholder="Penerima">
+                            <input type="text" class="form-control" id="penerima" name="penerima" placeholder="Penerima">
                         </div>
-                        <button type="submit" class="btn btn-primary">Tambahkan</button>
+                        <button type="submit" value="tambah_data" class="btn btn-primary">Tambahkan</button>
                     </form>
                 </div>
                 <!-- End of Content Wrapper -->

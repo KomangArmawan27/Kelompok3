@@ -125,7 +125,7 @@
                                 <img class="img-profile rounded-circle" src="/asset/img/profile.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">                                
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -140,20 +140,20 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <form>
+                    <form action="create" method="post">
                         <div class="form-group">
                             <label for="Tanggal">Tanggal Terkini</label>
-                            <input type="date" class="form-control" id="tanggal">
+                            <input type="date" class="form-control" id="tanggal" name="tanggal">
                         </div>
                         <div class="form-group">
                             <label for="Jumlah">Jumlah Pengeluaran</label>
-                            <input type="number" class="form-control" id="jumlah_pengeluaran" placeholder="Jumlah Pengeluaran">
+                            <input type="number" class="form-control" id="jumlah_pengeluaran" placeholder="Jumlah Pengeluaran" name="jumlah_pengeluaran">
                         </div>
                         <div class="form-group">
                             <label for="Penggunaan">Penggunaan Untuk</label>
-                            <input type="text" class="form-control" id="penggunaan" placeholder="Penggunaan">
+                            <input type="text" class="form-control" id="penggunaan" name="penggunaan" placeholder="Penggunaan">
                         </div>
-                        <button type="submit" class="btn btn-primary">Tambahkan</button>
+                        <button type="submit" value="tambah_data" class="btn btn-primary">Tambahkan</button>
                     </form>
                 </div>
                 <!-- End of Content Wrapper -->
