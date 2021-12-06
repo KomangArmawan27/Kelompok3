@@ -31,10 +31,10 @@ Route::get('/', function () {
 Route::get('/login', [UserController::class, 'index']);
 Route::get('/lupaPassword', [lupaPasswordController::class, 'lupaPassword']);
 Route::get('/register', [UserController::class, 'registration']);
-Route::get('/userPage', [userPageController::class, 'userPage']);
 Route::post('/auth', [UserController::class, 'postLogin']);
 Route::post('/reg', [UserController::class, 'postRegistration']);
-Route::post('/contact', [UserController::class, 'contact']);
+Route::get('/userPage', [userPageController::class, 'userPage']);
+Route::post('/contact', [userPageController::class, 'sendMail']);
 Route::group(['middleware' => ['web', 'auth']], function(){
     Route::get('/dashboard', [DashboardController::class]);
     Route::get('/dashboard',function(){
@@ -44,13 +44,13 @@ Route::group(['middleware' => ['web', 'auth']], function(){
         return view('user');
         }
     });
-Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
-Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
-Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
-Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
-Route::get('/barang', [BarangController::class, 'barang']);
-Route::get('/logout', [UserController::class, 'logout']);
 });
 Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
     return view('admin');
 });
+Route::get('/pemasukan', [TambahPemasukanController::class, 'index']);
+Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'create']);
+Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
+Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
+Route::get('/barang', [BarangController::class, 'barang']);
+Route::get('/logout', [UserController::class, 'logout']);
