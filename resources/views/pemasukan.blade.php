@@ -158,16 +158,6 @@
                                             <th>Hapus</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Tanggal</th>
-                                            <th>Jumlah</th>
-                                            <th>Penerima</th>
-                                            <th>Edit</th>
-                                            <th>Hapus</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         @foreach($pemasukan as $key => $tabel)
                                         <tr>

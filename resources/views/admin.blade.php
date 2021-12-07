@@ -253,14 +253,6 @@
                                                     <th>Penerima</th>
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Penerima</th>
-                                                </tr>
-                                            </tfoot>
                                             <tbody>
                                                 @foreach($pemasukan as $key => $tabel)
                                                 <tr>
@@ -293,14 +285,6 @@
                                                     <th>Penggunaan</th>
                                                 </tr>
                                             </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Penggunaan</th>
-                                                </tr>
-                                            </tfoot>
                                             <tbody>
                                                 @foreach($pengeluaran as $key => $tabel)
                                                 <tr>

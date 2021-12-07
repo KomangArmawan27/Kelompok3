@@ -154,7 +154,7 @@
                                 <div class="card shadow mb-4 col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dropdown Card Example</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Amplop</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -168,15 +168,13 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Dropdown menus can be placed in the card header in order to extend the functionality
-                                        of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis
-                                        icon in the card header can be clicked on in order to toggle a dropdown menu.
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Envelop.jpg" width="200" height="200">
                                     </div>
                                 </div>
                                 <div class="card shadow mb-4  col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dropdown Card Example</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Ballpoint Quantum</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -190,15 +188,13 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Dropdown menus can be placed in the card header in order to extend the functionality
-                                        of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis
-                                        icon in the card header can be clicked on in order to toggle a dropdown menu.
+                                    <img src="https://cf.shopee.co.id/file/212559ee66ddadd23412dd77d3bad722" width="200" height="200">
                                     </div>
                                 </div>
                                 <div class="card shadow mb-4  col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dropdown Card Example</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Ballpoint Standart</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -212,15 +208,13 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Dropdown menus can be placed in the card header in order to extend the functionality
-                                        of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis
-                                        icon in the card header can be clicked on in order to toggle a dropdown menu.
+                                    <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/3/3/0961f19e-b405-44bd-a8c0-db48123c72a4.png" width="200" height="200">
                                     </div>
                                 </div>
                                 <div class="card shadow mb-4  col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dropdown Card Example</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">CD-R GT-PRO</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -234,15 +228,13 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Dropdown menus can be placed in the card header in order to extend the functionality
-                                        of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis
-                                        icon in the card header can be clicked on in order to toggle a dropdown menu.
+                                    <img src="https://images.tokopedia.net/img/cache/700/product-1/2020/10/21/8617768/8617768_4b859bdd-b8e1-4077-b326-999799bd0326.jpg" width="200" height="200">
                                     </div>
                                 </div>
                                 <div class="card shadow mb-4  col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Dropdown Card Example</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">DVD Case</h6>
                                         <div class="dropdown no-arrow">
                                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -256,9 +248,67 @@
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
-                                        Dropdown menus can be placed in the card header in order to extend the functionality
-                                        of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis
-                                        icon in the card header can be clicked on in order to toggle a dropdown menu.
+                                    <img src="https://www.ubuy.co.id/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjEyb2pUYzVwdUwuX0FDX1NMMTAwMF8uanBn.jpg" width="200" height="200">
+                                    </div>
+                                </div>
+                                <div class="card shadow mb-4  col-3">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">DVD-RW GT-PRO</h6>
+                                        <div class="dropdown no-arrow">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                                <div class="dropdown-header">Edit</div>
+                                                <a class="dropdown-item" href="#">Ubah detil barang</a>
+                                                <a class="dropdown-item" href="#">Hapus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                    <img src="https://cf.shopee.co.id/file/38ce22c43a6ba83f18276210869d9dbc" width="200" height="200">
+                                    </div>
+                                </div>
+                                <div class="card shadow mb-4  col-3">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Kertas A4 70gr</h6>
+                                        <div class="dropdown no-arrow">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                                <div class="dropdown-header">Edit</div>
+                                                <a class="dropdown-item" href="#">Ubah detil barang</a>
+                                                <a class="dropdown-item" href="#">Hapus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                    <img src="https://eorder-bppbj.jakarta.go.id/web/image/product.image/4971/image?unique=7844046" width="200" height="200">
+                                    </div>
+                                </div>
+                                <div class="card shadow mb-4  col-3">
+                                    <!-- Card Header - Dropdown -->
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Kuitansi KT 40 Sinar Dunia</h6>
+                                        <div class="dropdown no-arrow">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                                <div class="dropdown-header">Edit</div>
+                                                <a class="dropdown-item" href="#">Ubah detil barang</a>
+                                                <a class="dropdown-item" href="#">Hapus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                    <img src="https://cf.shopee.co.id/file/527e4dfa3e93c1b08454e815a751a704" width="200" height="200">
                                     </div>
                                 </div>
                             </div>
