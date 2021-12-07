@@ -32,6 +32,10 @@ class DashboardController extends Controller
     {
         $pengeluaran = Pengeluaran::all();
         $pemasukan = Pemasukan::all();
-        return view('/admin', compact('pengeluaran', 'pemasukan'));
+        if(Auth::user()->admin == 1){
+        return view('admin', compact('pengeluaran', 'pemasukan'));
+        } else{
+            return view('user');
+        }
     }
 }
