@@ -30,7 +30,7 @@ class TambahPemasukanController extends Controller
         $pemasukan->save();
 
         if ($pemasukan) {
-            return redirect("/tambahPemasukan")
+            return redirect("/pemasukan")
                 ->with([
                     'success' => 'Data berhasil dimasukan'
                 ]);
