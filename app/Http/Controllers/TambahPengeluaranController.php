@@ -29,7 +29,7 @@ class TambahPengeluaranController extends Controller
         $pengeluaran->save();
 
         if ($pengeluaran) {
-            return redirect("/tambahPengeluaran")
+            return redirect("/pengeluaran")
                 ->with([
                     'success' => 'Data berhasil dimasukan'
                 ]);
