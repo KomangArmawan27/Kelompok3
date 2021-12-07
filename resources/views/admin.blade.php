@@ -28,7 +28,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
                 <div class="sidebar-brand-icon ">
                     <img src="/asset/img/LOGO KOPMA.png">
                 </div>
@@ -40,7 +40,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -251,8 +251,6 @@
                                                     <th>Tanggal</th>
                                                     <th>Jumlah</th>
                                                     <th>Penerima</th>
-                                                    <th>Edit</th>
-                                                    <th>Hapus</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
@@ -261,18 +259,17 @@
                                                     <th>Tanggal</th>
                                                     <th>Jumlah</th>
                                                     <th>Penerima</th>
-                                                    <th>Edit</th>
-                                                    <th>Hapus</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
+                                                @foreach($pemasukan as $key => $tabel)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>27 januari 2056</td>
-                                                    <td>100k</td>
-                                                    <td>arum</td>
-                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
-                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
+                                                    <td>{{$key+1}}</td>
+                                                    <td>{{ $tabel->tanggal }}</td>
+                                                    <td>{{ $tabel->jumlah_pemasukan }}</td>
+                                                    <td>{{ $tabel->penerima }}</td>
+                                                </tr>
+                                                @endforeach
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -294,8 +291,6 @@
                                                     <th>Tanggal</th>
                                                     <th>Jumlah</th>
                                                     <th>Penggunaan</th>
-                                                    <th>Edit</th>
-                                                    <th>Delete</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
@@ -304,19 +299,17 @@
                                                     <th>Tanggal</th>
                                                     <th>Jumlah</th>
                                                     <th>Penggunaan</th>
-                                                    <th>Edit</th>
-                                                    <th>Delete</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
+                                                @foreach($pengeluaran as $key => $tabel)
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>28 februari</td>
-                                                    <td>100k</td>
-                                                    <td>membeli kerupuk</td>
-                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
-                                                    <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
+                                                    <td>{{$key+1}}</td>
+                                                    <td>{{ $tabel->tanggal }}</td>
+                                                    <td>{{ $tabel->jumlah_pengeluaran }}</td>
+                                                    <td>{{ $tabel->penggunaan }}</td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

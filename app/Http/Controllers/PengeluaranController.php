@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengeluaran;
 use Illuminate\Http\Request;
 
 class PengeluaranController extends Controller
@@ -9,6 +10,7 @@ class PengeluaranController extends Controller
     //
     public function pengeluaran()
     {
-        return view ('pengeluaran');
+        $pengeluaran = Pengeluaran::all();
+        return view('/pengeluaran', compact('pengeluaran'));
     }
 }

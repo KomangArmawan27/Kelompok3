@@ -28,7 +28,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
                 <div class="sidebar-brand-icon ">
                     <img src="/asset/img/LOGO KOPMA.png">
                 </div>
@@ -40,7 +40,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -125,7 +125,7 @@
                                 <img class="img-profile rounded-circle" src="/asset/img/profile.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">                                
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
@@ -169,14 +169,16 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                        @foreach($pemasukan as $key => $tabel)
                                         <tr>
-                                            <td>1</td>
-                                            <td>27 januari 2056</td>
-                                            <td>100k</td>
-                                            <td>arum</td>
+                                            <td>{{$key+1}}</td>
+                                            <td>{{ $tabel->tanggal }}</td>
+                                            <td>{{ $tabel->jumlah_pemasukan }}</td>
+                                            <td>{{ $tabel->penerima }}</td>
                                             <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
                                             <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                                 <a href="tambahPemasukan" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Tambahkan Data</a>

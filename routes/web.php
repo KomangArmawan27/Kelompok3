@@ -49,13 +49,13 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
     return view('admin');
 });
-Route::get('/pemasukan', [TambahPemasukanController::class, 'index']);
-Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'create']);
+Route::get('/dashboard', [DashboardController::class, 'data']);
+Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
+Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
+Route::post('/storePemasukan', [TambahPemasukanController::class, 'store']);
 Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
 Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
+Route::post('/storePengeluaran', [TambahPengeluaranController::class, 'store']);
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/logout', [UserController::class, 'logout']);
 
-//insert data
-Route::get('insert','InsertTambahPengeluaranController@insertform');  //iki gaguna sek an, gangerti carane wkwk
-Route::post('/create', [InsertTambahPengeluaranController::class, 'insert']);

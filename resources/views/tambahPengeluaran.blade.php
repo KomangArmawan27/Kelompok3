@@ -28,7 +28,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
                 <div class="sidebar-brand-icon ">
                     <img src="/asset/img/LOGO KOPMA.png">
                 </div>
@@ -40,7 +40,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -140,7 +140,8 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <form action="create" method="post">
+                    <form action="storePengeluaran" method="post">
+                    <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
                         <div class="form-group">
                             <label for="Tanggal">Tanggal Terkini</label>
                             <input type="date" class="form-control" id="tanggal" name="tanggal">

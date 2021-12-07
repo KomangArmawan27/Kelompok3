@@ -41,7 +41,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="userPage" class="logo d-flex align-items-center">
                 <img src="/asset/img/LOGO KOPMA.png" alt="">
                 <span>KOPMA</span>
             </a>
@@ -394,7 +394,7 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center">
+                        <a href="userPage" class="logo d-flex align-items-center">
                             <img src="/asset/img/LOGO KOPMA.png" alt="">
                             <span>KOPMA</span>
                         </a>
