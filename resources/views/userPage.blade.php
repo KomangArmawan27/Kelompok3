@@ -99,12 +99,6 @@
                             <p>
                                 Unit Kegiatan Mahasiswa Koperasi Mahasiswa (KOPMA) merupakan UKM yang bertujuan untuk melatih jiwa kewirausahaan dan kedisiplinan para mahasiswa. Melalui UKM ini mahasiwa dapat memiliki gambaran dan mencoba merasakan dunia kerja mini yang nantinya akan berguna untuk bekal dalam menghadapi dunia kerja sesungguhnya. Saat ini usaha yang dikelola adalah penjualan barang berupa alat tulis serta jasa jilid & print untuk mahasiswa, dosen, dan karyawan di Kampus STIMATA Malang.
                             </p>
-                            <div class="text-center text-lg-start">
-                                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>Read More</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
 
@@ -242,54 +236,51 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-box blue">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Desain Grafis</h3>
+                            <p>Jasa desain grafis, juga bisa disebut jasa design grafis atau jasa desainer grafis,
+                                adalah sejenis jasa yang menghasilkan sebuah seni dengan memanfaatkan tulisan,
+                                ruang dan gambar untuk mengomunisasikan sebuah pesan. 
+                                Desain grafis bisa dalam bentuk fisik atau digital.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-box orange">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Jilid Mika</h3>
+                            <p>Jasa jilid mika adalah pelayanan jilid cover mika bening dan berwarna</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-box green">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Print Warna</h3>
+                            <p>Jasa Print Warna adalah mencetak gambar dan text berwarna ke dalam kertas.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="service-box red">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Asperiores Commodi</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Print Hitam Putih</h3>
+                            <p>Jasa print hitam putih adalah mencetak gambar dan text hitam-putih ke dalam kertas.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
                         <div class="service-box purple">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Velit Doloremque.</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Print Cover CD</h3>
+                            <p>Jasa print cover cd adalah mencetak label untuk cd atau dvd.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
                         <div class="service-box pink">
                             <i class="ri-discuss-line icon"></i>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                            <h3>Print Foto</h3>
+                            <p>Jasa print foto adalah mencetak gambar menggunakan kertas foto A4.</p>
                         </div>
                     </div>
 
@@ -317,29 +308,22 @@
                             <div class="col-md-6">
                                 <div class="info-box">
                                     <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street,<br>New York, NY 535022</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="info-box">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                                    <h3>Alamat</h3>
+                                    <p>Jl. Laksda Adi Sucipto No.249a, Pandanwangi, Kec. Blimbing, Kota Malang, Jawa Timur 65126</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="info-box">
                                     <i class="bi bi-envelope"></i>
                                     <h3>Email Us</h3>
-                                    <p>info@example.com<br>contact@example.com</p>
+                                    <p>kel3.kopma@gmail.com</p>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12" align='center'>
                                 <div class="info-box">
                                     <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                                    <h3>Jam Buka</h3>
+                                    <p>Senin - Jumat<br>08:00 - 16:00</p>
                                 </div>
                             </div>
                         </div>
@@ -398,12 +382,11 @@
                             <img src="/asset/img/LOGO KOPMA.png" alt="">
                             <span>KOPMA</span>
                         </a>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                        <br>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="envelope"><i class="bi bi-envelope"></i></a>
                             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
 
@@ -430,11 +413,8 @@
                     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact Us</h4>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                        Jl. Laksda Adi Sucipto No.249a, Pandanwangi, Kec. Blimbing, Kota Malang, Jawa Timur 65126 <br><br>
+                            <strong>Email:</strong> kel3.kopma@gmail.com<br>
                         </p>
 
                     </div>
