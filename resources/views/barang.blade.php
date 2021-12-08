@@ -38,32 +38,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Nav Item - Pemasukan  -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pemasukan">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <span>Pemasukan </span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Pengeluaran  -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pengeluaran">
-                    <i class="fas fa-money-check-alt"></i>
-                    <span>Pengeluaran</span>
-                </a>
-            </li>
-
             <!-- Nav Item - Barang  -->
             <li class="nav-item active">
                 <a class="nav-link collapsed" href="barang">
