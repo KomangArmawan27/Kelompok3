@@ -68,9 +68,6 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="lupaPassword">Lupa Password?</a>
-                                    </div>
-                                    <div class="text-center">
                                         <a class="small" href="register">Daftar Akun!</a>
                                     </div>
                                 </div>

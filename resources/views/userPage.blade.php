@@ -331,8 +331,11 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="contact" method="post" class="php-email-form">
-                        {{ csrf_field() }}
+                    @if(Session::has('status'))
+                    <div class="alert alert-success">{{ Session::get('status') }}</div>
+                    @endif
+                        <form action="contact" method="POST">
+                        @csrf
                             <div class="row gy-4">
 
                                 <div class="col-md-6">
@@ -351,12 +354,7 @@
                                     <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                                 </div>
 
-                                <div class="col-md-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message" >Terima kasih, kami sudah menerima email anda</div>
-                                    <button type="submit">Send Message</button>
-                                </div>
+                                <button class="btn btn-primary col-10" style="margin-left:8%" type="submit">Send Message</button>
 
                             </div>
                         </form>

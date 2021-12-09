@@ -21,7 +21,7 @@ class userPageController extends Controller
         $message = $request->input('message');
 
         $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-
+        try {
             // Pengaturan Server
            // $mail->SMTPDebug = 2;                                 // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -58,8 +58,14 @@ class userPageController extends Controller
 
             $mail->send();
 
+            $request->session()->flash('status', 'Terima kasih, kami sudah menerima email anda.');
             return view('userPage');
 
+        } catch (Exception $e) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
         }
+
+    }
 
     }
