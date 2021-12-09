@@ -135,6 +135,7 @@
 
                         <!-- Content Column -->
                         <div class="col-lg-12 mb-4">
+                        <h3 class="h3 mb-0 text-gray-800">Selamat Datang {{ Auth::user()->name }}</h3>
 
                             <!-- Project Card Example -->
                             <!-- <div class="card shadow mb-4">
@@ -166,7 +167,7 @@
                             </div> -->
 
                             <!-- Footer -->
-                            <footer class="sticky-footer bg-white">
+                            <footer class="sticky-footer bg-white" style="margin-top:41%">
                                 <div class="container my-auto">
                                     <div class="copyright text-center my-auto">
                                         <span>Copyright &copy; Your Website 2021</span>
