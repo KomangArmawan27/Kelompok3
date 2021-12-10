@@ -163,10 +163,11 @@
                                         <tr>
                                             <td>{{$key+1}}</td>
                                             <td>{{ $tabel->tanggal }}</td>
-                                            <td>{{ $tabel->jumlah_pemasukan }}</td>
+                                            <td>Rp. {{ $tabel->jumlah_pemasukan }}</td>
                                             <td>{{ $tabel->penerima }}</td>
-                                            <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
+                                            <td><a href="editPemasukan/{{ $tabel->id }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
+                                            <td><a href="hapusPemasukan/{{ $tabel->id }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash">
+                                            </i></a></td>
                                         </tr>
                                         @endforeach
                                     </tbody>

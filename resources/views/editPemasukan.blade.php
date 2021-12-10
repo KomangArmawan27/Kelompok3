@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pengeluaran</title>
+    <title>Pemasukan</title>
 
     <!-- Custom fonts for this template-->
     <link href="/asset/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -28,62 +28,17 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon ">
                     <img src="/asset/img/LOGO KOPMA.png">
                 </div>
                 <div class="sidebar-brand-text mx-3">KOPMA STIMATA</div>
             </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Nav Item - Pemasukan  -->
-            <li class="nav-item">
-                <a class="nav-link" href="pemasukan">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <span>Pemasukan </span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Pengeluaran  -->
-            <li class="nav-item active">
-                <a class="nav-link" href="pengeluaran">
-                    <i class="fas fa-money-check-alt"></i>
-                    <span>Pengeluaran</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - Barang  -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="barang">
-                    <i class="fa fa-th-large" aria-hidden="true"></i>
-                    <span>Barang</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
         </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper">
 
             <!-- Main Content -->
             <div id="content">
@@ -138,59 +93,32 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Content Row -->
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Pengeluaran</h6>
+                    <form action="/updatePemasukan" method="post">
+                        @foreach($editPemasukan as $key => $tabel)
+                        {{ csrf_field() }}
+                        <input type="hidden" name="id" value="{{ $tabel->id }}"> <br />
+                        <div class="form-group">
+                            <label for="Tanggal">Tanggal Terkini</label>
+                            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ $tabel->tanggal }}">
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Tanggal</th>
-                                            <th>Jumlah</th>
-                                            <th>Penggunaan</th>
-                                            <th>Edit</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($pengeluaran as $key => $tabel)
-                                        <tr>
-                                            <td>{{$key+1}}</td>
-                                            <td>{{ $tabel->tanggal }}</td>
-                                            <td>Rp. {{ $tabel->jumlah_pengeluaran }}</td>
-                                            <td>{{ $tabel->penggunaan }}</td>
-                                            <td><a href="editPengeluaran/{{ $tabel->id }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-pencil-alt"></i></a></td>
-                                            <td><a href="hapusPengeluaran/{{ $tabel->id }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-trash"></i></a></td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                <a href="tambahPengeluaran" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Tambahkan Data</a>
-                            </div>
+                        <div class="form-group">
+                            <label for="Jumlah">Jumlah Pemasukan</label>
+                            <input type="number" class="form-control" id="jumlah_pemasukan" name="jumlah_pemasukan" value="{{ $tabel->jumlah_pemasukan }}">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="Penerima">Nama Penerima</label>
+                            <input type="text" class="form-control" id="penerima" name="penerima" value="{{ $tabel->penerima }}">
+                        </div>
+                        <button type="submit" value="tambah_data" class="btn btn-primary">Simpan Perubahan</button>
+                        @endforeach
+                    </form>
                 </div>
                 <!-- End of Content Wrapper -->
             </div>
             <!-- End of Page Wrapper -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
             <!-- Scroll to Top Button-->
             <a class="scroll-to-top rounded" href="#page-top">

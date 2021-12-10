@@ -7,10 +7,7 @@ use App\Http\Controllers\lupaPasswordController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\userPageController;
-use App\Http\Controllers\TambahPemasukanController;
-use App\Http\Controllers\TambahPengeluaranController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\InsertTambahPengeluaranController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -50,12 +47,23 @@ Route::get('admin', ['middleware' => 'web', 'auth', 'admin'], function(){
     return view('admin');
 });
 Route::get('/dashboard', [DashboardController::class, 'data']);
+
+// route pemasukan
 Route::get('/pemasukan', [PemasukanController::class, 'pemasukan']);
-Route::get('/tambahPemasukan', [TambahPemasukanController::class, 'tambahPemasukan']);
-Route::post('/storePemasukan', [TambahPemasukanController::class, 'store']);
+Route::get('/editPemasukan/{id}', [PemasukanController::class, 'editPemasukan']);
+Route::get('/hapusPemasukan/{id}', [PemasukanController::class, 'hapusPemasukan']);
+Route::post('/updatePemasukan', [PemasukanController::class, 'update']);
+Route::get('/tambahPemasukan', [PemasukanController::class, 'tambahPemasukan']);
+Route::post('/storePemasukan', [PemasukanController::class, 'store']);
+
+// route pengeluaran
 Route::get('/pengeluaran', [PengeluaranController::class, 'pengeluaran']);
-Route::get('/tambahPengeluaran', [TambahPengeluaranController::class, 'tambahPengeluaran']);
-Route::post('/storePengeluaran', [TambahPengeluaranController::class, 'store']);
+Route::get('/tambahPengeluaran', [PengeluaranController::class, 'tambahPengeluaran']);
+Route::post('/storePengeluaran', [PengeluaranController::class, 'store']);
+Route::get('/editPengeluaran/{id}', [PengeluaranController::class, 'editPengeluaran']);
+Route::get('/hapusPengeluaran/{id}', [PengeluaranController::class, 'hapusPengeluaran']);
+Route::post('/updatePengeluaran', [PengeluaranController::class, 'update']);
+
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/logout', [UserController::class, 'logout']);
 
