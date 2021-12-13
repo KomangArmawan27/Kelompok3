@@ -65,5 +65,7 @@ Route::get('/hapusPengeluaran/{id}', [PengeluaranController::class, 'hapusPengel
 Route::post('/updatePengeluaran', [PengeluaranController::class, 'update']);
 
 Route::get('/barang', [BarangController::class, 'barang']);
+Route::get('/editStok/{id}', [BarangController::class, 'editStok']);
+Route::post('/updateStok', [BarangController::class, 'update']);
 Route::get('/logout', [UserController::class, 'logout']);
 
