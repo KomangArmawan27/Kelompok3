@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\lupaPasswordController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
+use App\Http\Controllers\UserBarangController;
 use App\Http\Controllers\userPageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,7 @@ Route::get('/hapusPengeluaran/{id}', [PengeluaranController::class, 'hapusPengel
 Route::post('/updatePengeluaran', [PengeluaranController::class, 'update']);
 
 Route::get('/barang', [BarangController::class, 'barang']);
+Route::get('/dashboard', [UserBarangController::class, 'userBarang']);
 Route::get('/editStok/{id}', [BarangController::class, 'editStok']);
 Route::post('/updateStok', [BarangController::class, 'update']);
 Route::get('/logout', [UserController::class, 'logout']);

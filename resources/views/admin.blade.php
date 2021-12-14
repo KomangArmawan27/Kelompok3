@@ -144,7 +144,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <a href="export" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
                     <h3 class="h3 mb-0 text-gray-800">Selamat Datang {{ Auth::user()->name }}</h3>
 
@@ -174,7 +174,7 @@
                                                 <tr>
                                                     <td>{{$key+1}}</td>
                                                     <td>{{ $tabel->tanggal }}</td>
-                                                    <td>{{ $tabel->jumlah_pemasukan }}</td>
+                                                    <td>Rp. {{ $tabel->jumlah_pemasukan }}</td>
                                                     <td>{{ $tabel->penerima }}</td>
                                                 </tr>
                                                 @endforeach
@@ -206,7 +206,7 @@
                                                 <tr>
                                                     <td>{{$key+1}}</td>
                                                     <td>{{ $tabel->tanggal }}</td>
-                                                    <td>{{ $tabel->jumlah_pengeluaran }}</td>
+                                                    <td>Rp. {{ $tabel->jumlah_pengeluaran }}</td>
                                                     <td>{{ $tabel->penggunaan }}</td>
                                                 </tr>
                                                 @endforeach

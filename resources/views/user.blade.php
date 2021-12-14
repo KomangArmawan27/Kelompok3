@@ -135,23 +135,13 @@
 
                         <!-- Content Column -->
                         <div class="col-lg-12 mb-4">
-                        <h3 class="h3 mb-0 text-gray-800">Selamat Datang {{ Auth::user()->name }}</h3>
-
-                        @foreach($barang as $key => $tabel)
+                            <h3 class="h3 mb-0 text-gray-800">Selamat Datang {{ Auth::user()->name }}</h3>
+                            <div class="row">
+                                @foreach($userBarang as $key => $tabel)
                                 <div class="card shadow mb-4 col-3">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                         <h6 class="m-0 font-weight-bold text-primary">{{ $tabel->nama_barang }}</h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Edit</div>
-                                                <a class="dropdown-item" href="#">Ubah detil barang</a>
-                                                <a class="dropdown-item" href="#">Hapus</a>
-                                            </div>
-                                        </div>
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
@@ -177,62 +167,63 @@
                                 </div>
                                 @endforeach
                             </div>
-
-                            <!-- Footer -->
-                            <footer class="sticky-footer bg-white" style="margin-top:41%">
-                                <div class="container my-auto">
-                                    <div class="copyright text-center my-auto">
-                                        <span>Copyright &copy; Your Website 2021</span>
-                                    </div>
-                                </div>
-                            </footer>
-                            <!-- End of Footer -->
-
                         </div>
-                        <!-- End of Content Wrapper -->
+
+                        <!-- Footer -->
+                        <footer class="sticky-footer bg-white" style="margin-top:41%">
+                            <div class="container my-auto">
+                                <div class="copyright text-center my-auto">
+                                    <span>Copyright &copy; Your Website 2021</span>
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- End of Footer -->
 
                     </div>
-                    <!-- End of Page Wrapper -->
+                    <!-- End of Content Wrapper -->
 
-                    <!-- Scroll to Top Button-->
-                    <a class="scroll-to-top rounded" href="#page-top">
-                        <i class="fas fa-angle-up"></i>
-                    </a>
+                </div>
+                <!-- End of Page Wrapper -->
 
-                    <!-- Logout Modal-->
-                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">×</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                    <a class="btn btn-primary" href="logout">Logout</a>
-                                </div>
+                <!-- Scroll to Top Button-->
+                <a class="scroll-to-top rounded" href="#page-top">
+                    <i class="fas fa-angle-up"></i>
+                </a>
+
+                <!-- Logout Modal-->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <a class="btn btn-primary" href="logout">Logout</a>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Bootstrap core JavaScript-->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-                    <!-- Core plugin JavaScript-->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+                <!-- Bootstrap core JavaScript-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+                <!-- Core plugin JavaScript-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-                    <!-- Custom scripts for all pages-->
-                    <script src="/asset/js/sb-admin-2.min.js"></script>
+                <!-- Custom scripts for all pages-->
+                <script src="/asset/js/sb-admin-2.min.js"></script>
 
-                    <!-- Page level plugins -->
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+                <!-- Page level plugins -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
-                    <!-- Page level custom scripts -->
-                    <script src="/asset/js/demo/chart-area-demo.js"></script>
-                    <script src="/asset/js/demo/chart-pie-demo.js"></script>
+                <!-- Page level custom scripts -->
+                <script src="/asset/js/demo/chart-area-demo.js"></script>
+                <script src="/asset/js/demo/chart-pie-demo.js"></script>
 
 </body>
 
