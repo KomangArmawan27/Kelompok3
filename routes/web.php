@@ -65,6 +65,10 @@ Route::get('/editPengeluaran/{id}', [PengeluaranController::class, 'editPengelua
 Route::get('/hapusPengeluaran/{id}', [PengeluaranController::class, 'hapusPengeluaran']);
 Route::post('/updatePengeluaran', [PengeluaranController::class, 'update']);
 
+//route Generate Report
+Route::get('/export', [DashboardController::class,'export']);
+
+
 Route::get('/barang', [BarangController::class, 'barang']);
 Route::get('/dashboard', [UserBarangController::class, 'userBarang']);
 Route::get('/editStok/{id}', [BarangController::class, 'editStok']);
