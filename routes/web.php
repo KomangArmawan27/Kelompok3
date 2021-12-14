@@ -70,7 +70,6 @@ Route::get('/export', [DashboardController::class,'export']);
 
 
 Route::get('/barang', [BarangController::class, 'barang']);
-Route::get('/dashboard', [UserBarangController::class, 'userBarang']);
 Route::get('/editStok/{id}', [BarangController::class, 'editStok']);
 Route::post('/updateStok', [BarangController::class, 'update']);
 Route::get('/logout', [UserController::class, 'logout']);

@@ -36,11 +36,11 @@ class DashboardController extends Controller
     {
         $pengeluaran = Pengeluaran::all();
         $pemasukan = Pemasukan::all();
-        $barang = Barang::all();
+        $userBarang = Barang::all();
         if(Auth::user()->admin == 1){
         return view('admin', compact('pengeluaran', 'pemasukan'));
         } else{
-            return view('user');
+            return view('user', compact('userBarang'));
         }
     }
     public function export()
@@ -80,7 +80,6 @@ class DashboardController extends Controller
         $writer->save('ReportPemasukan_Pengeluaran.xlsx');
         $pengeluaran = Pengeluaran::all();
         $pemasukan = Pemasukan::all();
-        $barang = Barang::all();
         if(Auth::user()->admin == 1){
         return view('admin', compact('pengeluaran', 'pemasukan'));
         } else{
