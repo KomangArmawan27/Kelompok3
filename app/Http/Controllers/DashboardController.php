@@ -56,25 +56,25 @@ class DashboardController extends Controller
         $sheet->mergeCells('F1:G1');
         $sheet->setCellValue('F1', 'Pengeluaran');
         $sheet->setCellValue('F2', 'No');
-        $sheet->setCellValue('D2', 'Tanggal');
-        $sheet->setCellValue('D2', 'Jumlah');
-        $sheet->setCellValue('D2', 'Penggunaan');
+        $sheet->setCellValue('G2', 'Tanggal');
+        $sheet->setCellValue('H2', 'Jumlah');
+        $sheet->setCellValue('I2', 'Penggunaan');
         $koneksi = mysqli_connect('localhost', 'root', '', 'kopma');
         $query = mysqli_query($koneksi,"select * from tabel_pemasukan
-                                        join tabel_pengeluaran on tabel_pengeluaran.id = tabel_pemasukan.id ");
-        $i = 2;
+                                        join tabel_pengeluaran on tabel_pengeluaran.id = tabel_pemasukan.id");
+        $i = 3;
         $no = 1;
         while($row = mysqli_fetch_array($query))
         {
-            $sheet->setCellValue('A'.$i, $no++);
+            $sheet->setCellValue('A'.$i, $row['id']);
             $sheet->setCellValue('B'.$i, $row['tanggal']);
             $sheet->setCellValue('C'.$i, $row['jumlah_pemasukan']);
             $sheet->setCellValue('D'.$i, $row['penerima']);
-            $sheet->setCellValue('F'.$i, $no++);
+            $sheet->setCellValue('F'.$i, $row['id']);
             $sheet->setCellValue('G'.$i, $row['tanggal']);
             $sheet->setCellValue('H'.$i, $row['jumlah_pengeluaran']);
             $sheet->setCellValue('I'.$i, $row['penggunaan']);
-            $i++;
+        $i++;
         }
         $writer = new Xlsx($spreadsheet);
         $writer->save('ReportPemasukan_Pengeluaran.xlsx');
